@@ -1,0 +1,33 @@
+:root{
+	--bar-color: red;
+	--width: 0;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: sans-serif;
+}
+body:before{
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: block;
+	width: calc(var(--width) * 1vw);/* Aqui ocurre la magia */
+	height: 5px;
+	background-color: var(--bar-color);
+}
+h1{
+	padding-top: 16px;
+	padding-bottom: 16px;
+	text-align: center;
+}
+section{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: justify;
+}
